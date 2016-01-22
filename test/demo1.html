@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../node_modules/underscore/underscore.js"></script>
+    <script type="text/javascript" src="../js/animate.table.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../style/animations.css">
+    <link rel="stylesheet" type="text/css" href="../style/ultra.css">
+    <link rel="stylesheet" type="text/css" href="../style/theme/red.css">
+
+    <script type="text/javascript">
+        var options = {
+            headers: ["Exercises","Committed/Uncommitted","Accuracy"],
+            headerWidth:["400px", "300px", "80px"],
+            rows: [
+                ["English exam 5.1 - test","10/10","90%"],
+                ["English exam 5.1 - multiple choice","12/14","66%"],
+                ["English exam 5.3 - multiple choice","8/10","15%"],
+                ["English exam 6.1 - multiple choice","9/10","21%"],
+                ["Grammar - assorted questions 1","10/10","80%"],
+                ["Test - choose the best answer","2/5","80%"],
+                ["Beginners esl exercises","5/10","100%"],
+                ["Beginners esl exercises 8","10/10","100%"],
+                ["Beginners esl exercises 9","10/10","50%"],
+                ["Grammar - assorted questions 1","10/10","80%"],
+                ["Test - choose the best answer","2/5","80%"],
+                ["Beginners esl exercises","5/10","100%"],
+                ["Beginners esl exercises 8","10/10","100%"],
+                ["Beginners esl exercises 9","10/10","50%"]
+            ],
+            page: {
+                current: 1,
+                per: 5
+            }
+
+        };
+
+    </script>
+
+</head>
+<body>
+
+<div id="mytable">
+
+
+</div>
+
+
+<script>
+
+    $("#mytable").ultraTable(options);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+.ultratable * {
+  box-sizing: border-box; }
+.ultratable .ultra-header {
+  display: table-header-group; }
+.ultratable .ultra-body {
+  display: table-row-group;
+  border-collapse: separate; }
+  .ultratable .ultra-body.leaving {
+    position: absolute; }
+  .ultratable .ultra-body .ultra-row {
+    display: table-row; }
+.ultratable .ultra-cell {
+  display: table-cell;
+  vertical-align: middle; }
+  .ultratable .ultra-cell .cell-banned {
+    position: absolute; }
+.ultratable .pagination ul.numbers li {
+  list-style: none;
+  float: left;
+  margin: 5px 5px;
+  padding: 5px 10px; }
+
+/*# sourceMappingURL=ultra.css.map */

@@ -1,0 +1,31 @@
+
+.ultratable {
+  * {
+    box-sizing: border-box;
+  }
+  .ultra-header {
+
+  }
+  .ultra-body {
+
+    &.leaving {
+      position: absolute;
+    }
+    .ultra-row {
+    }
+  }
+  .ultra-cell {
+    display:inline-block;
+    vertical-align: middle;
+  }
+  .pagination {
+    ul.numbers {
+      li {
+        list-style: none;
+        float: left;
+        margin: 5px 5px;
+        padding: 5px 10px;
+      }
+    }
+  }
+}

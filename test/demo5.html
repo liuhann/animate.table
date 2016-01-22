@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../node_modules/underscore/underscore.js"></script>
+    <script type="text/javascript" src="../js/roma.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../style/animations.css">
+
+    <link rel="stylesheet" type="text/css" href="../style/ultra.css">
+    <link rel="stylesheet" type="text/css" href="../style/theme/red.css">
+
+    <style>
+        .score {
+            display: inline-block;
+            font-size: 26px;
+            margin: 0 20px;
+        }
+    </style>
+    <script>
+        var rowData = [
+            {"away": "Bucks", "home": "Heat", "awayscore": 0, "homescore": 0}, {
+                "away": "Timberwolves",
+                "home": "Pelicans",
+                "awayscore": 0,
+                "homescore": 0
+            }, {"away": "Thunder", "home": "Nuggets", "awayscore": 0, "homescore": 0}, {
+                "away": "Pacers",
+                "home": "Suns",
+                "awayscore": 0,
+                "homescore": 0
+            }
+        ];
+        var rowData2 = [
+            {"away": "Bucks", "home": "Heat", "awayscore": 1, "homescore": 0}, {
+                "away": "Timberwolves",
+                "home": "Pelicans",
+                "awayscore": 0,
+                "homescore": 0
+            }
+        ];
+    </script>
+
+
+    <script type="text/javascript">
+        var options = {
+            headers: [" Home ", "Scores", "Away"],
+            headerWidth: ["300px", "150", "300px"],
+            page: {
+                current: 1,
+                per: 20
+            },
+            rowTemplates: [
+                " {{home}}",
+                "<div class='animated score'>{{homescore}}</div>:<div class='animated score'>{{awayscore}}</div>",
+                "{{away}}"
+            ],
+            pageEntranceAnimation: "pt-page-scaleUp",
+            pageExistAnimation: "pt-page-rotatePushLeft"
+        };
+    </script>
+
+</head>
+<body>
+
+<div id="mytable">
+
+
+</div>
+
+
+<script>
+
+    var ultraTable = $("#mytable").ultraTable(options);
+    ultraTable.data(rowData2);
+
+</script>
+
+</body>
+</html>

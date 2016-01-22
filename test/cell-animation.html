@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../node_modules/underscore/underscore.js"></script>
+    <script type="text/javascript" src="../js/roma.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../style/animations.css">
+
+    <link rel="stylesheet" type="text/css" href="../style/ultra.css">
+    <link rel="stylesheet" type="text/css" href="../style/theme/red.css">
+
+    <script>
+        var rowData = [{
+            "figure": "5693b26b0ae6a.jpeg",
+            "name": "Onirim",
+            "vote": "42",
+            "by": "Immersive Garden",
+            "from": "France",
+            "date": "January 22, 2016"
+        }, {
+            "figure": "5692e0a36d132.jpeg",
+            "name": "Jumeirah Inside",
+            "vote": "47",
+            "by": "MediaMonks",
+            "from": "Netherlands",
+            "date": "January 21, 2016"
+        }, {
+            "figure": "568eae5d0eced.jpeg",
+            "name": "Atieva",
+            "vote": "67",
+            "by": "Atieva",
+            "from": "U.S.A.",
+            "date": "January 20, 2016"
+        }, {
+            "figure": "568c839702fb6.jpeg",
+            "name": "Highline: America's Most Admired Lawbreaker",
+            "vote": "51",
+            "by": "Gladeye",
+            "from": "New Zealand",
+            "date": "January 19, 2016"
+        }, {
+            "figure": "568e38877a423.jpeg",
+            "name": "Sailing with Greenpeace",
+            "vote": "61",
+            "by": "TWLVR",
+            "from": "France",
+            "date": "January 18, 2016"
+        }, {
+            "figure": "568c36c52fa37.jpeg",
+            "name": "Parcours Canada",
+            "vote": "48",
+            "by": "Locomotive",
+            "from": "Canada",
+            "date": "January 17, 2016"
+        }, {
+            "figure": "568a8f18cbbad.jpeg",
+            "name": "Social Wars",
+            "vote": "49",
+            "by": "Socialbakers Design Team",
+            "from": "Czech Republic",
+            "date": "January 16, 2016"
+        }, {
+            "figure": "568aed9824d6a.jpeg",
+            "name": "Epicurrence No. 3 — Park City, UT",
+            "vote": "108",
+            "by": "Rally Interactive",
+            "from": "U.S.A.",
+            "date": "January 15, 2016"
+        }, {
+            "figure": "567a6267be05b.jpeg",
+            "name": "Fornasetti | Secret Page",
+            "vote": "43",
+            "by": "POMO",
+            "from": "Italy",
+            "date": "January 14, 2016"
+        }, {
+            "figure": "5671a965b8290.jpeg",
+            "name": "Google - Performing Arts",
+            "vote": "63",
+            "by": "Google Brand Studio",
+            "from": "United Kingdom",
+            "date": "January 13, 2016"
+        }, {
+            "figure": "56850ef8850d6.jpeg",
+            "name": "La chasse aux rêves",
+            "vote": "41",
+            "by": "Sweet Punk",
+            "from": "France",
+            "date": "January 12, 2016"
+        }, {
+            "figure": "568163968a778.jpeg",
+            "name": "Fleximize Squad",
+            "vote": "62",
+            "by": "inTacto",
+            "from": "Argentina",
+            "date": "January 11, 2016"
+        }];
+    </script>
+    <script type="text/javascript">
+        var options = {
+            headers: [" Name ", " By ", "From", "Date", " Votes "],
+            rowUpdateEffect: "pt-page-moveFromBottom",
+            pageEntranceCellDelay: 100,
+            rowTemplates: [
+                "<img style='width:120px; height: auto' src='img/{{figure}}'>"
+                ,"{{by}}"
+                ,"{{from}}"
+                ,"{{date}}"
+                ,"<div class='animate'>{{vote}}</div>"
+            ],
+            rowUpdateSelector: "animate"
+        };
+
+        setTimeout(function() {
+            var ultraTable = $("#mytable").ultraTable();
+            ultraTable.updateRow({
+                "figure": "568aed9824d6a.jpeg",
+                "name": "Fleximize Squad",
+                "vote": "136",
+                "by": "inTacto",
+                "from": "Argentina",
+                "date": "January 11, 2016"
+            }, 4);
+        }, 2000);
+    </script>
+</head>
+<body>
+
+<div id="mytable"/>
+
+<script>
+    var ultraTable = $("#mytable").ultraTable(options);
+    ultraTable.data(rowData);
+</script>
+
+</body>
+</html>

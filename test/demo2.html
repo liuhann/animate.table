@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../node_modules/underscore/underscore.js"></script>
+    <script type="text/javascript" src="../js/roma.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../style/animations.css">
+
+
+    <link rel="stylesheet" type="text/css" href="../style/ultra.css">
+    <link rel="stylesheet" type="text/css" href="../style/theme/red.css">
+
+
+    <script type="text/javascript">
+        var options = {
+            headers: ["Exercises","Committed/Uncommitted","Accuracy"],
+            headerWidth:["300px", "200px", "80px"],
+            rows: [
+                {
+                    id: "1",
+                    name: "English exam 5.1 - test",
+                    commited: 10,
+                    total: 12,
+                    right: 8
+                },
+                {
+                    id: "2",
+                    name: "English exam 5.1 - multiple choice",
+                    commited: 7,
+                    total: 12,
+                    right: 5
+                },
+                {
+                    id: "3",
+                    name: "English exam 5.3 - multiple choice",
+                    commited: 5,
+                    total: 5,
+                    right: 4
+                },
+                {
+                    id: "4",
+                    name: "Grammar - assorted questions 1",
+                    commited: 7,
+                    total: 12,
+                    right: 7
+                }
+            ],
+            page: {
+                current: 1,
+                per: 8
+            },
+            rowTemplates: [
+              "{{name}}","<span>{{commited}}</span>/<span>{{total}}</span>","{{Math.floor(100*right/commited)}}%"
+            ],
+            pageEntranceAnimation: "pt-page-scaleUp",
+            pageExistAnimation: "pt-page-rotatePushLeft"
+        };
+
+
+        function appendRow(index) {
+            var ultraTable = $("#mytable").ultraTable();
+            ultraTable.insertRow( {
+                id: "4",
+                name: "Grammar - assorted questions 1",
+                commited: 7,
+                total: Math.floor(Math.random()*100),
+                right: 7
+            }, index);
+        }
+    </script>
+
+</head>
+<body>
+
+<div id="mytable">
+
+
+</div>
+
+<div  class="test">
+    <a class="btn" onclick="appendRow();">Append Row</a>
+    <a class="btn" onclick="appendRow(3);">Insert Row</a>
+</div>
+
+<script>
+
+    var ultraTable = $("#mytable").ultraTable(options);
+
+</script>
+
+</body>
+</html>
