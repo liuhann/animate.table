@@ -1,20 +1,24 @@
 .ultratable {
   * {
     box-sizing: border-box;
+    padding: 0;
   }
   .ultra-header {
     display: table-header-group;
   }
   .ultra-body {
-    display: table-row-group;
+    display: table;
     border-collapse: separate;
-
-
-    &.leaving {
-      position: absolute;
-    }
-    .ultra-row {
-      display: table-row;
+    position: relative;
+    overflow: hidden;
+    .ultra-body-content {
+      display: table-row-group;
+      &.leaving {
+        position: absolute;
+      }
+      .ultra-row {
+        display: table-row;
+      }
     }
   }
   .ultra-cell {
@@ -25,6 +29,7 @@
     }
   }
   .pagination {
+    padding: 0;
     ul.numbers {
       li {
         list-style: none;
